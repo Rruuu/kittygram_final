@@ -17,11 +17,11 @@ services:
     depends_on:
       - db
     volumes:
-      - static:/backend_static/
+      - static:/backend_static
       - media:/app/media/
   frontend:
-    env_file: .env
     image: rruuu/kittygram_frontend
+    env_file: .env
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static/
