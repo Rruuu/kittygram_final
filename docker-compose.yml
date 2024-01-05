@@ -21,7 +21,7 @@ services:
       - media:/app/media/
   frontend:
     env_file: .env
-    build: /C:/Users/Ruslan/YP-Dev/kittygram_final/frontend/
+    build: ./frontend/
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
